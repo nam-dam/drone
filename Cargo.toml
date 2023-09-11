@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["drone-controller", "drone-device"]
+
+[profile.release]
+codegen-units = 1
+debug = 2
+debug-assertions = false
+incremental = false
+lto = "fat"
+opt-level = 's'
+overflow-checks = false
+
+[patch.crates-io]
+embassy-executor = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-net = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-embedded-hal = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-stm32 = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-time = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
+embassy-usb = { git = "https://github.com/embassy-rs/embassy", rev = "183824fbddb2a05aed4ed854f6eb08fe4ba7e7c1" }
